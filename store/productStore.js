@@ -4,7 +4,7 @@ import { create } from 'zustand';
 // import APIURL from "../utils/api";
 
 // const APIURL =  process.env.NEXT_PUBLIC_API_URL;
-console.log(APIURL)
+console.log(APIURL);
 const useProductStore = create((set) => ({
   products: [],
   product: null,
