@@ -1,6 +1,6 @@
 'use client';
 import { create } from 'zustand';
-import APIURL from "../utils/api";
+import { APIURL } from '@/utils/api';
 
 // const APIURL =  process.env.NEXT_PUBLIC_API_URL;
 const useCategoryStore = create((set) => ({

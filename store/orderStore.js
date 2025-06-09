@@ -1,4 +1,4 @@
-import APIURL from "../utils/api";
+import { APIURL } from '@/utils/api';
 import { create } from 'zustand';
 
 // Added parsePrice function for consistency

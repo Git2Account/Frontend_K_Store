@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import useAuthStore from '@/store/authStore';
 import Link from 'next/link';
+import { APIURL } from '@/utils/api';
 
 export default function AdminLoginPage() {
-  const APIURL =  process.env.NEXT_PUBLIC_API_URL;
+  // const APIURL =  process.env.NEXT_PUBLIC_API_URL;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useAuthStore from '@/store/authStore';
+import { APIURL } from '@/utils/api';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ export default function LoginPage() {
   
   const router = useRouter();
   const { setUser } = useAuthStore();
-  const APIURL =  process.env.NEXT_PUBLIC_API_URL;
+  // const APIURL =  process.env.NEXT_PUBLIC_API_URL;
   
   const handleSubmit = async (e) => {
     e.preventDefault();
