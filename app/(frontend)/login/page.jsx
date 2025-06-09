@@ -12,6 +12,7 @@ export default function LoginPage() {
   
   const router = useRouter();
   const { setUser } = useAuthStore();
+  const APIURL =  process.env.NEXT_PUBLIC_API_URL;
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ export default function LoginPage() {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${APIURL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

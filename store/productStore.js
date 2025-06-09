@@ -1,8 +1,8 @@
 'use client';
 import { create } from 'zustand';
 
-const APIURL = "http://localhost:5000";
-
+const APIURL =  process.env.NEXT_PUBLIC_API_URL;
+console.log(APIURL)
 const useProductStore = create((set) => ({
   products: [],
   product: null,
@@ -16,6 +16,9 @@ const useProductStore = create((set) => ({
     set({ loading: true, error: null });
     try {
       let url = `${APIURL}/api/products?page=${page}&limit=${limit}`;
+
+      console.log("url",url);
+
       if (categoryId) url += `&categoryId=${categoryId}`;
       
       const res = await fetch(url);

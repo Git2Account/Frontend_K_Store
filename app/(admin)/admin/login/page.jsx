@@ -6,6 +6,7 @@ import useAuthStore from '@/store/authStore';
 import Link from 'next/link';
 
 export default function AdminLoginPage() {
+  const APIURL =  process.env.NEXT_PUBLIC_API_URL;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +21,7 @@ export default function AdminLoginPage() {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/admin/login', {
+      const response = await fetch(`${APIURL}/api/auth/admin/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
