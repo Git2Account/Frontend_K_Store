@@ -11,6 +11,7 @@ import NewsLetter from '@/app/(frontend)/common/newsletter';
 import WhyChooseUs from '@/app/(frontend)/common/whyChooseUs';
 
 export default function HomePage() {
+  console.log(process.env.NEXT_PUBLIC_API_URL)
   const { categories, getCategories } = useCategoryStore();
   const { products, getProducts } = useProductStore();
 

@@ -1,3 +1,4 @@
+import APIURL from "../utils/api";
 import { create } from 'zustand';
 
 // Added parsePrice function for consistency
@@ -8,7 +9,6 @@ const parsePrice = (price) => {
   return isNaN(parsed) ? 0 : parsed;
 };
 
-const APIURL =  process.env.NEXT_PUBLIC_API_URL;
 
 const useOrderStore = create((set) => ({
   orders: [],
